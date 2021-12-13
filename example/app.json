@@ -1,0 +1,22 @@
+{
+  "name": "bp-mfe-host-example",
+  "displayName": "BpMfeHost Example",
+  "expo": {
+    "name": "bp-mfe-host-example",
+    "slug": "bp-mfe-host-example",
+    "description": "Example app for bp-mfe-host",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
