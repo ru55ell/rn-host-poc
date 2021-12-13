@@ -11,11 +11,11 @@ npm install bp-mfe-host
 ## Usage
 
 ```js
-import { multiply } from "bp-mfe-host";
+import { BPMfeHost } from "bp-mfe-host";
 
 // ...
 
-const result = await multiply(3, 7);
+<BPMfeHost navConfig={config} />
 ```
 
 ## Contributing
