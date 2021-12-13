@@ -1,3 +1,5 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import BPMfeHost from './BPMfeHost';
+
+export * from './components';
+
+export { BPMfeHost };

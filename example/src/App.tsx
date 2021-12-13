@@ -1,31 +1,24 @@
 import * as React from 'react';
+import { BPMfeHost } from 'bp-mfe-host';
+import Home from './Home'
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'bp-mfe-host';
+const navConfig = {
+  type: 'DRAWER_NAV',
+  screenOptions: {},
+  routes: [
+    {
+      name: 'Home',
+      component: Home,
+      options: {},
+      showTitle: false,
+    },
+  ],
+  initialRouteName: 'Home',
+};
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <BPMfeHost navConfig={navConfig} />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
